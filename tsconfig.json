@@ -1,21 +1,11 @@
-// {
-//   "files": [],
-//   "references": [
-//     { "path": "./tsconfig.app.json" },
-//     { "path": "./tsconfig.node.json" }
-//   ]
-// }
-
-// { "path": "./tsconfig.app.json" }
-
 {
   "compilerOptions": {
-    // ... your other compiler options
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"]
+      "@/*": ["*"],
+      "@pages/*": ["pages/*"],
+      "@ui/*": ["shared/ui/*"],
+      "@api/*": ["shared/api/*"]
     }
   },
   "include": ["src"],
