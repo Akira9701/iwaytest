@@ -1,0 +1,30 @@
+.auth_page {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  &__wrap {
+    max-width: 600px;
+    width: 100%;
+    border-radius: var(--border-common);
+    border-radius: 10px;
+    border: var(--border-common);
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  &__title {
+    margin: 0 auto;
+    width: fit-content;
+  }
+  &__form {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}

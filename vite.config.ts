@@ -1,28 +1,29 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
+import viteTsconfigPaths from 'vite-tsconfig-paths'
+import svgrPlugin from 'vite-plugin-svgr'
+import { configDotenv } from 'dotenv'
+configDotenv() // Load .env variables
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
   server: {
     host: true,
     port: 3000,
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://transstage1.iwayex.com/transnextgen/v3',
+    //     changeOrigin: true,
+    //     rewrite: path => path.replace(/^\/api/, ''),
+    //   },
+    // },
   },
   resolve: {
     alias: {
-      // '@': path.resolve(__dirname, './src/'),
-      // '@pages': path.resolve(__dirname, './src/pages/'),
-      // '@ui': path.resolve(__dirname, './src/shared/ui/'),
-      // '@api': path.resolve(__dirname, './src/shared/api/'),
-      // '@': '/src',
-      // '@pages': '/src/pages',
-      // '@ui': '/src/shared/ui',
-      // '@api': '/src/shared/api',
-      '@': path.resolve(__dirname, './src'),
-      '@pages': path.resolve(__dirname, './src/pages'),
-      '@ui': path.resolve(__dirname, './src/shared/ui'),
-      '@api': path.resolve(__dirname, './src/shared/api'),
+      '@': '/src',
+      '@pages': '/src/pages',
+      '@ui': '/src/shared/ui',
+      '@api': '/src/shared/api',
     },
   },
 })
