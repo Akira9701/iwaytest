@@ -2,10 +2,10 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 interface AuthSliceState {
-  token: string | undefined
+  token: string
 }
 
-const initialState: AuthSliceState = { token: undefined }
+const initialState: AuthSliceState = { token: '' }
 
 const AuthSlice = createSlice({
   name: 'auth',

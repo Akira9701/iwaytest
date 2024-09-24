@@ -1,11 +1,15 @@
 import { FC } from 'react'
 import { variants } from '../lib/index'
 interface ITypography {
-  title: string
   variant: keyof typeof variants
   className?: string
+  children?: React.ReactNode
 }
-export const Typography: FC<ITypography> = ({ title, variant, className }) => {
+export const Typography: FC<ITypography> = ({
+  variant,
+  className,
+  children,
+}) => {
   return (
     <p
       className={className}
@@ -16,7 +20,7 @@ export const Typography: FC<ITypography> = ({ title, variant, className }) => {
         lineHeight: variants[variant].lineHeight,
       }}
     >
-      {title}
+      {children}
     </p>
   )
 }
