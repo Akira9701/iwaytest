@@ -1,5 +1,5 @@
 import { Input } from 'antd'
-import React, { Dispatch, FC, SetStateAction } from 'react'
+import React, { FC } from 'react'
 
 interface IAppInput {
   value: string

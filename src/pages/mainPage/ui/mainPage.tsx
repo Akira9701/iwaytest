@@ -1,7 +1,7 @@
 import { Typography } from '@/shared/ui/Typography'
 import styles from './mainPage.module.scss'
 import Input from '@/shared/ui/Input'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useAppDispatch, useAppSelector } from '@/app/store'
 import TripsContainer from './ui/TripsContainer'
 import { filterTripsHandler } from './lib/helpers'

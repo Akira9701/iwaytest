@@ -1,4 +1,3 @@
-import { axiosInstance } from '../instance/instance'
 import { IAuthResponse } from './types'
 
 export const AuthApi = {
