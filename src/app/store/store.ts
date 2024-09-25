@@ -1,4 +1,5 @@
 import { AuthReducer } from '@/entities/auth'
+import { TripsReducer } from '@/entities/trips'
 import {
   AnyAction,
   combineReducers,
@@ -21,6 +22,7 @@ import storage from 'redux-persist/lib/storage'
 
 const rootReducer = combineReducers({
   authorization: AuthReducer,
+  trips: TripsReducer,
 })
 
 const persistedReducer = persistReducer(
@@ -32,8 +34,8 @@ const persistedReducer = persistReducer(
 )
 
 const store = configureStore({
-  reducer: persistedReducer, // Ваша логика редьюсера
-  devTools: { trace: true, traceLimit: 25 }, // Настройка devTools с отслеживанием
+  reducer: persistedReducer,
+  devTools: { trace: true, traceLimit: 25 },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
   server: {
     host: true,
-    port: 3000,
+    port: 8000,
     // proxy: {
     //   '/api': {
     //     target: 'http://transstage1.iwayex.com/transnextgen/v3',

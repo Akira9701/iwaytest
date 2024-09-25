@@ -3,36 +3,99 @@ export const variants = {
     fontFamily: 'Montserrat, sans-serif',
     fontSize: '12px',
     fontWeight: 400,
-    lineHeight: '16px', // Added lineHeight
+    lineHeight: '16px',
   },
   mediumRegular: {
     fontFamily: 'Montserrat, sans-serif',
     fontSize: '16px',
     fontWeight: 400,
-    lineHeight: '24px', // Added lineHeight
+    lineHeight: '24px',
   },
   largeBold: {
     fontFamily: 'Montserrat, sans-serif',
     fontSize: '24px',
     fontWeight: 700,
-    lineHeight: '32px', // Added lineHeight
+    lineHeight: '32px',
   },
   extraLargeBold: {
     fontFamily: 'Montserrat, sans-serif',
     fontSize: '32px',
     fontWeight: 700,
-    lineHeight: '40px', // Added lineHeight
+    lineHeight: '40px',
   },
   smallLight: {
     fontFamily: 'Montserrat, sans-serif',
     fontSize: '12px',
     fontWeight: 300,
-    lineHeight: '16px', // Added lineHeight
+    lineHeight: '16px',
   },
   mediumExtraBold: {
     fontFamily: 'Montserrat, sans-serif',
     fontSize: '16px',
     fontWeight: 800,
-    lineHeight: '24px', // Added lineHeight
+    lineHeight: '24px',
+  },
+  smallBold: {
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '12px',
+    fontWeight: 700,
+    lineHeight: '16px',
+  },
+  mediumBold: {
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '16px',
+    fontWeight: 700,
+    lineHeight: '24px',
+  },
+  largeLight: {
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '24px',
+    fontWeight: 300,
+    lineHeight: '32px',
+  },
+  extraLargeRegular: {
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '32px',
+    fontWeight: 400,
+    lineHeight: '40px',
+  },
+  mediumLightItalic: {
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '16px',
+    fontWeight: 300,
+    fontStyle: 'italic',
+    lineHeight: '24px',
+  },
+  smallItalic: {
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '12px',
+    fontWeight: 400,
+    fontStyle: 'italic',
+    lineHeight: '16px',
+  },
+  largeItalicBold: {
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '24px',
+    fontWeight: 700,
+    fontStyle: 'italic',
+    lineHeight: '32px',
+  },
+  extraSmallRegular: {
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '10px',
+    fontWeight: 400,
+    lineHeight: '14px',
+  },
+  hugeBold: {
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '40px',
+    fontWeight: 700,
+    lineHeight: '48px',
+  },
+  hugeLight: {
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '40px',
+    fontWeight: 300,
+    lineHeight: '48px',
   },
 }

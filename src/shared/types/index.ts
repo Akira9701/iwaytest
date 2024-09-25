@@ -1,4 +1,4 @@
-interface Trip {
+export interface ITrip {
   order_id: number
   user_id: number
   order_type: number

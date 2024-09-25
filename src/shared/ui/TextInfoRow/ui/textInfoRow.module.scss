@@ -1,0 +1,14 @@
+.row {
+  &__title {
+    margin-bottom: 4px;
+  }
+
+  &__container {
+    margin: 8px 0px;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

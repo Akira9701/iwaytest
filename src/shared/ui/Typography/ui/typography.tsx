@@ -11,7 +11,7 @@ export const Typography: FC<ITypography> = ({
   children,
 }) => {
   return (
-    <p
+    <div
       className={className}
       style={{
         fontWeight: variants[variant].fontWeight,
@@ -21,6 +21,6 @@ export const Typography: FC<ITypography> = ({
       }}
     >
       {children}
-    </p>
+    </div>
   )
 }

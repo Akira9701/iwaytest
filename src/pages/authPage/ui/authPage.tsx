@@ -34,7 +34,7 @@ export const AuthPage = () => {
         const token = await getAuthToken(data.username, data.password)
         token && dispatch(updateToken(token))
         setIsLoading(false)
-        navigate('/')
+        navigate('/', { replace: true })
       } catch (error) {
         setIsLoading(false)
       }
