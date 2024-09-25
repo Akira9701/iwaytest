@@ -15,6 +15,7 @@ export const AuthPage = () => {
   //Utils
 
   //Data
+  const [isLogin, setIsLogin] = useState<null | boolean>(null)
   const [data, setData] = useState<{
     username: string
     password: string
@@ -29,13 +30,15 @@ export const AuthPage = () => {
   const getAuthTokenHandler = async () => {
     if ((data.username, data.password)) {
       try {
-        console.log(3)
         setIsLoading(true)
         const token = await getAuthToken(data.username, data.password)
+        setIsLogin(true)
         token && dispatch(updateToken(token))
         setIsLoading(false)
+
         navigate('/', { replace: true })
       } catch (error) {
+        setIsLogin(false)
         setIsLoading(false)
       }
     }
@@ -49,19 +52,24 @@ export const AuthPage = () => {
         </Typography>
         <div className={styles.auth_page__form__container}>
           <Input
+            status={isLogin !== null && !isLogin ? 'error' : undefined}
             value={data.username}
             placeHolder="user name"
-            onChange={(e: string) =>
+            onChange={(e: string) => {
+              isLogin !== null && setIsLogin(null)
               setData(prev => ({ ...prev, username: e }))
-            }
+            }}
           />
           <Input
+            status={isLogin !== null && !isLogin ? 'error' : undefined}
             value={data.password}
             isPassword={true}
             placeHolder="user name"
-            onChange={(e: string) =>
+            onChange={(e: string) => {
+              isLogin !== null && setIsLogin(null)
+
               setData(prev => ({ ...prev, password: e }))
-            }
+            }}
           />
         </div>
         <Button

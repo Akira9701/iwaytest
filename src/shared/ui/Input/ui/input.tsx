@@ -7,12 +7,14 @@ interface IAppInput {
   isPassword?: boolean
   className?: string
   placeHolder?: string
+  status?: '' | 'warning' | 'error' | undefined
 }
 
 const AppInput: FC<IAppInput> = React.memo(
-  ({ value, onChange, isPassword, className, placeHolder }) => {
+  ({ value, onChange, isPassword, className, placeHolder, status }) => {
     const field = isPassword ? (
       <Input.Password
+        status={status}
         className={className}
         value={value}
         onChange={e => onChange(e.currentTarget.value)}
@@ -20,6 +22,7 @@ const AppInput: FC<IAppInput> = React.memo(
       />
     ) : (
       <Input
+        status={status}
         className={className}
         value={value}
         onChange={e => onChange(e.currentTarget.value)}

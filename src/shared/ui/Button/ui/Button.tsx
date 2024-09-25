@@ -3,7 +3,7 @@ import { FC, ReactNode } from 'react'
 
 interface IAppButton {
   children: ReactNode
-  isLoading: boolean
+  isLoading?: boolean
   onClick: () => void
 }
 

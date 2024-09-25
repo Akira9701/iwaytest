@@ -7,11 +7,19 @@ export const AuthApi = {
     //   login,
     //   password,
     // })
-    //TODO: Времмено закоменттил апи, так как данные авторизации не подходят
-    return Promise.resolve({
-      result: {
-        token: '222222',
-      },
+    //TODO: Времмено закоменттил апи, так как данные авторизации не
+    return new Promise((res, rej) => {
+      setTimeout(() => {
+        if (login === 'test3' && password === 'test3') {
+          return res({
+            result: {
+              token: '222222',
+            },
+          })
+        } else {
+          rej({ error: 'Invalid login' })
+        }
+      }, 5000)
     })
   },
 }

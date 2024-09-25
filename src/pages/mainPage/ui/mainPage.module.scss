@@ -4,4 +4,12 @@
       margin: 20px 0px;
     }
   }
+  &__title {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+  }
 }
