@@ -48,13 +48,13 @@ export const AuthPage = () => {
     <div className={styles.auth_page__container}>
       <div className={styles.auth_page__wrap}>
         <Typography variant="largeBold" className={styles.auth_page__title}>
-          Login
+          Вход
         </Typography>
         <div className={styles.auth_page__form__container}>
           <Input
             status={isLogin !== null && !isLogin ? 'error' : undefined}
             value={data.username}
-            placeHolder="user name"
+            placeHolder="Логин"
             onChange={(e: string) => {
               isLogin !== null && setIsLogin(null)
               setData(prev => ({ ...prev, username: e }))
@@ -64,7 +64,7 @@ export const AuthPage = () => {
             status={isLogin !== null && !isLogin ? 'error' : undefined}
             value={data.password}
             isPassword={true}
-            placeHolder="user name"
+            placeHolder="Пароль"
             onChange={(e: string) => {
               isLogin !== null && setIsLogin(null)
 
@@ -78,7 +78,7 @@ export const AuthPage = () => {
           }}
           isLoading={isLoading}
         >
-          <p>Login</p>
+          <p>Вход</p>
         </Button>
       </div>
     </div>
